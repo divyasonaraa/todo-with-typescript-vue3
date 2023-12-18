@@ -1,0 +1,113 @@
+:root {
+  --color-primary: #3a7cfd;
+  --color-gradient-start: #55ddff;
+  --color-gradient-end: #c058f3;
+  --color-gradient: linear-gradient(
+    135deg,
+    var(--color-gradient-start) 0%,
+    var(--color-gradient-end) 100%
+  );
+
+  --color-background-light: #ffffff;
+  --color-element-light: #ffffff;
+  --color-border-light: #e3e4f1;
+  --color-text-light: #494c6b;
+  --color-text-secondary-light: #d1d2da;
+
+  --color-background-dark: #25273d;
+  --color-element-dark: #393a4b;
+  --color-border-dark: #5b5e7e;
+  --color-text-dark: #ffffff;
+  --color-text-secondary-dark: #4d5067;
+
+  --color-heading: #ffffff;
+
+  --box-shadow-light: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --box-shadow-dark: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --box-shadow-lift-light: 0px 10px 30px -3px rgba(0, 0, 0, 0.3);
+  --box-shadow-lift-dark: 0px 5px 30px -3px rgba(0, 0, 0, 0.3);
+
+  --image-bg-mobile-light: url(@/assets/images/bg-mobile-light.jpg);
+  --image-bg-desktop-light: url(@/assets/images/bg-desktop-light.jpg);
+  --image-bg-mobile-dark: url(@/assets/images/bg-mobile-dark.jpg);
+  --image-bg-desktop-dark: url(@/assets/images/bg-desktop-dark.jpg);
+
+  --font-family-heading: "Josefin Sans", sans-serif;
+  --font-weight-heading: 700;
+
+  --font-family-element: "Josefin Sans", sans-serif;
+  --font-weight-element: 400;
+}
+
+#app.light {
+  --color-background: var(--color-background-light);
+  --color-element: var(--color-element-light);
+  --color-border: var(--color-border-light);
+  --color-text: var(--color-text-light);
+  --color-text-secondary: var(--color-text-secondary-light);
+
+  --box-shadow: var(--box-shadow-light);
+  --box-shadow-lift: var(--box-shadow-lift-light);
+
+  --image-bg-mobile: var(--image-bg-mobile-light);
+  --image-bg-desktop: var(--image-bg-desktop-light);
+}
+
+#app.dark {
+  --color-background: var(--color-background-dark);
+  --color-element: var(--color-element-dark);
+  --color-border: var(--color-border-dark);
+  --color-text: var(--color-text-dark);
+  --color-text-secondary: var(--color-text-secondary-dark);
+
+  --box-shadow: var(--box-shadow-dark);
+  --box-shadow-lift: var(--box-shadow-lift-dark);
+
+  --image-bg-mobile: var(--image-bg-mobile-dark);
+  --image-bg-desktop: var(--image-bg-desktop-dark);
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-family: var(--font-family-element);
+  font-weight: var(--font-weight-element);
+  font-size: 62.5%;
+  line-height: 1.5;
+  box-sizing: border-box;
+  height: 100%;
+
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+a {
+  color: var(--color-theme-primary);
+}
+
+#app {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: space-between;
+  background-color: var(--color-background);
+}
